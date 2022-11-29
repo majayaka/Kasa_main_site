@@ -1,0 +1,62 @@
+/* BANNER */
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  margin: 0 100px;
+  background: url("../assets/background-paysage-accueil.png") no-repeat center;
+  background-size: cover;
+  border-radius: 25px;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+.banner h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+  z-index: 1;
+}
+@media (max-width: 1200px) {
+  .banner h1 {
+    font-size: 30px;
+  }
+  .banner {
+    margin: 0 30px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    margin: 0 3%;
+    height: initial;
+    padding: 7% 0;
+    border-radius: 10px;
+  }
+  .banner::before {
+    border-radius: 10px;
+  }
+  .banner h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .banner {
+    justify-content: flex-start;
+  }
+  .banner h1 {
+    width: 65%;
+    margin: 0;
+    text-align: left;
+    padding-left: 5%;
+  }
+}
