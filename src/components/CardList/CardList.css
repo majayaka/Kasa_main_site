@@ -1,0 +1,16 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: space-around;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  width: 100%;
+  margin: 43px auto;
+}
+
+@media (max-width: 375px){
+.card-list {
+flex-direction: column;
+}
+}

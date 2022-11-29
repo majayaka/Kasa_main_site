@@ -12,7 +12,8 @@ header nav {
 
 nav a {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 34.22px;
   color: #ff6060;
   text-decoration: none;
 }
@@ -34,21 +35,26 @@ header a:active {
     font-size: 20px;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 375px)  {
   header {
-    margin: 3% 10px;
+    margin: 20px;
+  }
+
+  header img {
+    padding-left: 20px;
   }
   header > a {
-    width: 40%;
+    width: 35%;
   }
   header > a img {
     width: 100%;
   }
   header nav {
-    gap: 20px !important;
+    gap: 17px !important;
+    margin-right: 15px;
   }
   header nav a {
-    font-size: 15px;
+    font-size: 50%;
     text-transform: uppercase;
   }
 }

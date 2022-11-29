@@ -1,4 +1,11 @@
+.nomatch {
+ height: 100vh;
+
+}
+
+
 .nomatch h1 {
+  /* 404 */
   left: 0%;
   right: 0%;
   top: 0%;
@@ -16,7 +23,7 @@
 }
 
 .nomatch p {
-  /* Ooops! The requested path could not be found.*/
+  /* Ooops! phrase */
 
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -24,7 +31,7 @@
   font-size: 36px;
   line-height: 142.6%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   text-align: center;
   color: #ff6060;
   margin-left: 20%;
@@ -32,17 +39,18 @@
 }
 
 .backhome {
+  /* backhome phrase */
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 142.6%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   text-decoration-line: underline;
   text-align: center;
   margin-left: 40%;
-  margin-top: 8%;
+  margin-top: 5%;
   color: #ff6060;
 }
 
