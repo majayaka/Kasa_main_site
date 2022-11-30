@@ -31,10 +31,32 @@
     position: absolute;
     z-index: 1;
     color: #FFFFFF;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: 20px;
+    text-align: left;
     font-size: 18px;
     font-weight: 500;
-    padding-left: 20px;
-    top: 32vh;
+    line-height: 25px;
 }
+
+@media (max-width: 1200px) {
+    .card  {
+        width: 335px;
+        height: 255px;
+        margin: 0px;
+        border-radius: 10px;
+        
+    }
+
+    .card img {
+        border-radius: 10px;
+        object-fit: cover;
+    
+    }
+
+}
+
 
 

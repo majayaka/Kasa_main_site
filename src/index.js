@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import './index.css';
 import Nomatch from './pages/Nomatch/Nomatch';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';

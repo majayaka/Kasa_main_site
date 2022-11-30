@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 220px;
-  width: 100%;
+  height: 223px;
+  margin: 0 100px;
   background-size: cover;
   border-radius: 25px;
 }
@@ -17,7 +17,7 @@
   height: 100%;
   width: 100%;
   background: black;
-  opacity: 0.9;
+  opacity: 0.4;
   border-radius: 25px;
 }
 
@@ -28,7 +28,6 @@
   font-weight: 500;
   color: white;
   z-index: 1;
-  margin: 0 20px 20px 20px;
 }
 
 .banner img {
@@ -36,24 +35,57 @@
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  opacity: 60%;
-  
+}
+
+@media (max-width: 1200px) {
+    .banner {
+          height: 150px;
+          border-radius: 10px;
+          margin: 0px ;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+    .banner {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner {
+    }
+    .banner::before {
+        border-radius: 10px;
+    }
+    .banner h1 {
+        font-size: 24px;
+    }
+
+    .banner img {
+        border-radius: 10px;
+        object-fit: cover;
+
+    }
 }
 
 @media (max-width: 375px) {
   .banner {
+    max-width: 100%;
     height: 111px;
     text-align: left;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 10px;
+    margin: 15px;
   } 
 
   .banner h1 {
+    width: 60vw;
     font-size: 24px;
     line-height: 24px;
     text-align: left;
     padding-left: 15px;
-    padding-right: 50px;
 
   } 
 
