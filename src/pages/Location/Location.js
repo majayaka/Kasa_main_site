@@ -1,43 +1,89 @@
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+import logements from '../../data/logements.json';
+
 
 import './Location.css';
+import Stars from '../../components/Stars/Stars';
+// import Slider from '../../components/Slider/Slider';
+// import Dropdown from '../../components/Dropdown/Dropdown';
 
-function Location ({logements}) {
-  const param = useParams();
-  const [logement] = useState(logements.find(logement => logement.id === param.id));
+import Nomatch from '../Nomatch/Nomatch';
 
-  return (
-    <div>
-      {logement != null && (
-                <div className='body_location'>
+const Location = ()=> {
+    
+    const {logementId} = useParams();
 
-                    {/* <Gallery photo/>  */}
+    const selectedLocation = logements.filter(logement =>{
+        if(logement.id === logementId){
+            return logement;
+        }
 
-                    <div className='presentation'>
-                        <div className='title'>
-                            <h1>{logement.title}</h1>
-                            <span>{logement.location}</span>
+        return null;
+        });
+
+        if(selectedLocation.length === 1){
+            const selectedLocationObject = selectedLocation[0];
+
+            const equipements = () => {
+                let equipementKey = 0;
+
+                return selectedLocationObject.equipements.map(equipement => {
+                    equipementKey++;
+                    return (
+                        <li className="equipement" key={equipementKey}>{equipement}></li>
+                    )
+                })
+        }
+
+        const list = equipements();
+
+        const tags = () => {
+            let tagKey = 0;
+            return selectedLocationObject.tags.map((tag) => {
+                tagKey++;
+                return(
+                    <li className="tag" key={tagKey}>{tag}</li>
+                )
+            })
+        }
+
+        const listTag = tags();
+
+
+        return (
+                <div className="location-section">
+                    {/* <Slider />  */}
+                    <div className="presentation">
+                        <div className="section-title">
+                            <h1 className="section-title_subt">{selectedLocationObject.title}</h1>
+                            <p className="section-title_loc">{selectedLocationObject.location}</p>
+                            <ul className="taglist">{listTag}</ul>
                         </div>
-                        <ul className='list_tags'>
-                            {(logement.tags).map(tag => (
-                                <li key={tag.toString()}>{tag}</li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className='star_rating'>
-                        <div className='host_profile'>
-                            <span>{(logement.host).name}</span>
-                            <img src={(logement.host).picture} alt="profile" />
+                        <div className="section-host">
+                            <div className="host">
+                                <p className="host-name">{selectedLocationObject.host.name}</p>
+                                <img className="host-pic" src={selectedLocationObject.host.picture} alt={selectedLocationObject.host.name} />   
+                            </div>
+                            <Stars scaleValue={selectedLocationObject.rating}/>
                         </div>
-                        <ul className='list_start'>
-                            {stars.map((_, index) => (
-                                <li key={index}>
-                                    {/* <{stars?}/> */}
-                                </li>
-                            ))}
-                        </ul>
                     </div>
-    </div>
-   
+                    <div className="section-dropdown">
+                        <div className="dropdown-description">
+                            {/* <Dropdown title="Description" text={selectedLocationObject.description}/> */}
+                        </div>
+                        <div className="dropdown-equipements">
+                            {/* <Dropdown title="Equipements" text={list}/> */}
+                        </div>
+                    </div>
+                </div>
+            )}
+            else{
+                return(
+                    <div>
+                        <Nomatch />
+                    </div>
+                )
+            }
+        }
+
+export default Location;

@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
@@ -7,6 +6,7 @@ import Nomatch from './pages/Nomatch/Nomatch';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
 import SharedLayout from './pages/SharedLayout/SharedLayout';
+import Location from './pages/Location/Location';
 
 import logements from './data/logements.json';
 
@@ -17,6 +17,7 @@ root.render(
      <Routes>
       <Route path='/' element={<SharedLayout />}>
         <Route index element={<Home logements={logements}/>} />
+        <Route path='/:id' element={<Location logements={logements} /> } />
         <Route path='about' element={<About />} />
         <Route path='*' element={<Nomatch />} />
       </Route>
