@@ -6,22 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import Nomatch from './pages/Nomatch/Nomatch';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
+import SharedLayout from './pages/SharedLayout/SharedLayout';
 
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 import logements from './data/logements.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <>
 <Router>
-  <Header />
      <Routes>
-      <Route path='/' element={<Home logements={logements}/>} />
-      <Route path='about' element={<About />} />
-      <Route path='*' element={<Nomatch />} />
+      <Route path='/' element={<SharedLayout />}>
+        <Route index element={<Home logements={logements}/>} />
+        <Route path='about' element={<About />} />
+        <Route path='*' element={<Nomatch />} />
+      </Route>
      </Routes>   
-  <Footer />
 </Router>
 </>,
   document.getElementById("root") 
