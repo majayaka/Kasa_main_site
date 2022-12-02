@@ -7,7 +7,7 @@ export default function CardList({logements}) {
   return (
     <div className="card-list">
       {logements.map(({ id, title, cover }) => (
-        <Link to={"/logement/"+id} key={id}>
+        <Link to={`/location/${id}`}>
         <Card 
               title={title}
               cover={cover} 
@@ -17,4 +17,6 @@ export default function CardList({logements}) {
     </div>
   );
 }
+
+
 

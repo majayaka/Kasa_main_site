@@ -7,6 +7,12 @@
     margin: 28px;
     background-size: cover;
     position: relative;
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card::before {

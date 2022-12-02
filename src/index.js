@@ -12,18 +12,17 @@ import logements from './data/logements.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<>
+
 <Router>
      <Routes>
       <Route path='/' element={<SharedLayout />}>
         <Route index element={<Home logements={logements}/>} />
-        <Route path='/:id' element={<Location logements={logements} /> } />
+        <Route path='/location/:id' element={<Location /> } />
         <Route path='about' element={<About />} />
         <Route path='*' element={<Nomatch />} />
       </Route>
      </Routes>   
-</Router>
-</>,
+</Router>,
   document.getElementById("root") 
 );
 
