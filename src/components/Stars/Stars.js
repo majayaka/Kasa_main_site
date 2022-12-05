@@ -1,28 +1,35 @@
 import PropTypes from 'prop-types';
-// import './Stars.css';
+import './Stars.css';
+
 
 export default function Stars ({props})  {
+    let numStars = props.rating;
+    const maxStar = 5;
+    const stars = [];
 
-    const stars = [1, 2, 3, 4, 5];
-
-return (
-    <div className='stars'>
-        {stars.map((rangeElem) => 
-        props >= rangeElem ? 
-        <img key={rangeElem.toString()} className="fullStar" src="/public/images/stars.png" alt="star" />
-        : <img key={rangeElem.toString()} className="emptyStar" src="/public/images/star-empty.png" alt="star" />
-        )}
-    </div>
-    )
+    for (let i = 1; i < maxStar; i++) {
+        if (i <= numStars) {
+            stars.push(
+            <svg key={i} className="active-star" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z" />
+            </svg>
+            );
+        } else { 
+            stars.push(
+            <svg key={i} xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z" />
+            </svg>
+            );
+        }
+    }
+    return (
+        <div className="stars">
+            {stars}
+        </div>
+    );
 }
 
 Stars.propTypes = {
-    props: PropTypes.number,
+    rating: PropTypes.number.isRequired,
 };
-
-Stars.defaultProps = {
-    props: null,
-};
-
-
 

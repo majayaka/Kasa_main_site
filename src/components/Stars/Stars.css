@@ -1,0 +1,9 @@
+.active-star {
+  fill: #FF6060;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+  fill: #C4C4C4;
+}

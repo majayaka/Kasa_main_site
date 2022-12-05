@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-// import './Slider.css';
+import './Slider.css';
 
 function Slider ({ pictures }) {
     const [currentPicture, setCurrentPicture] = useState(0);
@@ -23,9 +23,9 @@ function Slider ({ pictures }) {
 
     return (
         <div key={currentPicture} className="slider">
-            <button className="slider__button slider__button--previous" onClick={handlePrevious}>Previous</button>
+            <button onClick={handleNext} className={pictures.length === 1 ? 'btn_none' : 'btn_next'}><img src="/images/chevron-left.png" alt="btn_next" /></button>
             <img className="slider__image" src={pictures[currentPicture]} alt="slider" />
-            <button className="slider__button slider__button--next" onClick={handleNext}>Next</button>
+            <button onClick={handlePrevious} className={pictures.length === 1 ? 'btn_none' : 'btn_prev'}><img src="/images/chevron-right.png" alt="btn_prev" /></button>   
         </div>
     );
 

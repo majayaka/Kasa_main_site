@@ -3,7 +3,7 @@ import { useState } from 'react';
 // import './Dropdown.css';
 
 function cleanDescription(description) {
-    const array = description.split(' ');
+    const array = description.split('###');
 
     if (array.length > 1) {
         return array.map((value) => `${value}\n`);
@@ -20,10 +20,10 @@ function Dropdown({ title, description }) {
     };
 
     return (
-        <div className="dropdown">
+        <div className="dropdown-section">
             <button 
             type="button"
-            className={open ? "dropdown opened" : "candropdown"}
+            className={open ? "dropdown opened" : "dropdown"}
             onClick={toggle}
             >
             {title}

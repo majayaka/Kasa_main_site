@@ -2,13 +2,13 @@ import { useParams } from 'react-router-dom';
 import logements from '../../data/logements.json';
 import './Location.css';
 
-import Stars from '../../components/Stars/Stars';
+// import Stars from '../../components/Stars/Stars';
 import Slider from '../../components/Slider/Slider';
 // import Dropdown from '../../components/Dropdown/Dropdown';
 import Host from '../../components/Host/Host';
-// import Tag from '../../components/Tag/Tag';
 
 import Nomatch from '../Nomatch/Nomatch';
+
 
 function Location() {
     const params = useParams();
@@ -25,16 +25,17 @@ function Location() {
                     <div className="section-title">
                         <h1 className="section-title_subt">{location.title}</h1>
                         <p className="section-title_loc">{location.location}</p>
-                        <div className="taglist">
-                            {/* {location.tags.map((tag) => (
-                                <Tag key={`${tag}`} value={tag} />
-                            ))} */}
-                        </div>
                     </div>
+                    <ul className='taglist'>
+                        {(location.tags).map(tag => (
+                            <li key={tag.toString()}>{tag}</li>
+                        ))}
+                    </ul>
+                    
                     <div className="section-host">
                         <div className="host">
                             <Host name={location.host.name} picture={location.host.picture} />
-                            <Stars value={parseInt(location.rating, 10)}/>
+                            {/* <Stars rating={location.rating} /> */}
                         </div>
                     </div>
                     <div className="section-dropdown">
