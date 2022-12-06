@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import './Slider.css';
 
@@ -32,14 +31,5 @@ function Slider ({ pictures }) {
 
 }
 
-// to avoid error of prop type
-
-Slider.propTypes = {
-  pictures: PropTypes.arrayOf(PropTypes.string),
-};
-
-Slider.defaultProps = {
-  pictures: null,
-};
 
 export default Slider;

@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: center;
   height: 223px;
-  margin: 0 100px;
+  margin: 0 auto;
   background-size: cover;
   border-radius: 25px;
+  max-width: 1500px;
 }
 
 .banner::before {

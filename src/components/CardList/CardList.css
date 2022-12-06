@@ -1,19 +1,16 @@
 .card-list {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: left;
-  justify-content: center;
-  gap: 40px;
-  background-color: #F7F7F7;
-  border-radius: 25px;
-  margin: 43px 100px;
-  max-width: 100%;
-  overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    gap: 40px;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+    margin: 43px auto;
 }
 
 .card-list a {
     margin-top: 28px;
-    height: 320px;
     width: calc((100% / 3) - 53px);
 }
 

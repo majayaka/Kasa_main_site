@@ -8,6 +8,7 @@ import Home from './pages/Home/Home';
 import SharedLayout from './pages/SharedLayout/SharedLayout';
 import Location from './pages/Location/Location';
 
+import './index.css';
 import logements from './data/logements.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

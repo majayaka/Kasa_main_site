@@ -1,0 +1,51 @@
+.host {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin-top: -5vh;
+}
+
+.host-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: "Montserrat";
+    color: #FF6060;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+}
+
+.host-name p {
+    line-height: 25.67px;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.host-name p+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.host-picture {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    margin-top: 4vh;
+}
+
+@media (max-width: 992px) {
+    .host-name {
+      font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .host-name {
+      font-size: 12px;
+    }
+}
