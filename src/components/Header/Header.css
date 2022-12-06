@@ -2,7 +2,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 6vh 100px;
+  margin: 6vh auto;
 }
 
 header nav {
@@ -39,11 +39,17 @@ header a:active {
 
 @media (max-width: 479px) {
     
+    header {
+      margin: -1vh 4vw;
+    
+    }
+
     header>a {
         width: 40%;
     }
     header>a img {
         width: 100%;
+        margin-right: 3vw;
     }
     header nav {
         gap: 20px !important;

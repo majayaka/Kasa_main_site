@@ -5,10 +5,9 @@
   align-items: center;
   justify-content: center;
   height: 223px;
-  margin: 0 auto;
+  margin: 5vh auto;
   background-size: cover;
   border-radius: 25px;
-  max-width: 1500px;
 }
 
 .banner::before {
@@ -42,7 +41,7 @@
     .banner {
           height: 150px;
           border-radius: 10px;
-          margin: 0px ;
+          margin-bottom: 10px ;
     }
 
     .banner h1 {
@@ -54,8 +53,7 @@
 }
 
 @media (max-width: 767px) {
-    .banner {
-    }
+    
     .banner::before {
         border-radius: 10px;
     }

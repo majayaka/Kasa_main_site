@@ -3,31 +3,28 @@
     flex-wrap: wrap;
     text-align: left;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
     background-color: #F7F7F7;
     border-radius: 25px;
-    margin: 43px auto;
+    margin: 10px auto;
 }
 
 .card-list a {
-    margin-top: 28px;
+    margin-top: 10px;
     width: calc((100% / 3) - 53px);
 }
 
 @media (max-width: 1200px) {
 
   .card-list {
-    margin: 10px 30px;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    gap: 50px;
     border-radius: 10px;
   }
 
 .card-list a {
   width: calc((100% / 2) - 90px);
-  height: 255px;
-  gap: 10vh;  
+  height: 255px; 
 }
 
 }
@@ -40,7 +37,6 @@
         flex-direction: column;
         align-items:center;
         margin: 0 auto;
-        padding: 10px;
     }
 
     .card-list a {
@@ -50,34 +46,12 @@
     
 }
 
-@media (max-width: 767px) {
-    .card-list {
-        background-color: #FFFFFF;
-        flex-direction: column;
-        align-items:center;
-        margin: 20px auto;
-        padding: 0 auto;
-    }
-
-    .card-list a {
-
-      margin: auto 20px;
-      padding: auto 10px;
-    }
-
-    
-}
 
 @media (max-width: 660px) {
 
     .card-list {
-      width: 100%;
-      margin-left: -10vw;
-    }
-
-    .card-list a {
-    margin: 0 auto;
-    width: calc(100% - 230px);
+     margin-right: 25vw; 
+  
     }
     
 }
@@ -86,11 +60,8 @@
 @media (max-width: 375px){
 
   .card-list {
-      margin: 0px;
-      gap: 20px;
       align-items: center;
-      text-align: left;
-      justify-content: flex-start;
+      
     }
     
     .card-list a {
