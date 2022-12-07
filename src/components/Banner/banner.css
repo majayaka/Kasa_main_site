@@ -8,6 +8,7 @@
   margin: 5vh auto;
   background-size: cover;
   border-radius: 25px;
+  max-width: 1440px;
 }
 
 .banner::before {

@@ -1,7 +1,18 @@
 body {
-  /* margin: 0; */
   font-family: 'Montserrat', sans-serif;
   background: #FFFFFF;
-  width: 100%;
-  margin: 0 auto;
+  
+}
+
+.home-frame {
+  margin: 40px auto;
+  max-width: 1240px;
+}
+
+@media (max-width: 375px){
+
+  body {
+      align-items: center;
+      margin: 0 auto;
+    }
 }

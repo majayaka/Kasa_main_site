@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: center;
   height: 209px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .footer img {
   height: 39.44px;
   width: 122px;
-  margin-bottom: -2vh;
+  margin-bottom: -1vh;
 }
 
 .footer p {
@@ -30,7 +30,21 @@
 }
 
  .footer p {
-        font-size: 16px;
+    font-size: 16px;
   }
+
+}
+
+
+
+@media (max-width: 375px) {
+
+ .footer {
+  margin: 0 auto;
+}
+
+ .footer img {
+  margin-bottom: 3vh;
+}
 
 }

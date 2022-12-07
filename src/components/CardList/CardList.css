@@ -7,10 +7,11 @@
     background-color: #F7F7F7;
     border-radius: 25px;
     margin: 10px auto;
+    max-width: 1440px;
 }
 
 .card-list a {
-    margin-top: 10px;
+    margin-top: 20px;
     width: calc((100% / 3) - 53px);
 }
 
@@ -20,6 +21,8 @@
     padding: 10px;
     align-items: center;
     border-radius: 10px;
+    background-color: #FFFFFF;
+    max-width: 100%;
   }
 
 .card-list a {
@@ -33,10 +36,10 @@
 
 @media (max-width: 889px) {
     .card-list {
-        background-color: #FFFFFF;
         flex-direction: column;
         align-items:center;
         margin: 0 auto;
+        max-width: 100%;
     }
 
     .card-list a {
@@ -46,12 +49,26 @@
     
 }
 
-
-@media (max-width: 660px) {
-
+@media (max-width: 770px) {
     .card-list {
-     margin-right: 25vw; 
-  
+      /* margin: 1%;
+       */
+    }
+
+    .card-list a {
+      width: 60%;
+      height: 255px;
+      
+    }
+    
+}
+
+
+@media (max-width: 550px) {
+    
+    .card-list a {
+      width: 70%;
+      height: 255px;
     }
     
 }
@@ -61,14 +78,14 @@
 
   .card-list {
       align-items: center;
-      
+      margin: 0 auto;
     }
     
     .card-list a {
+    margin-top: 10px;
     border-radius: 10px;
     text-align: center;
     height: 255px;
     width: 100%;
-    
     }
 }
