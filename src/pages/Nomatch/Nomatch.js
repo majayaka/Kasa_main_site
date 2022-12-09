@@ -1,4 +1,6 @@
+/* import of styles */
 import "./Nomatch.css";
+/* import Link in react-router-dom */
 import { Link } from "react-router-dom";
 
 export default function Nomatch() {

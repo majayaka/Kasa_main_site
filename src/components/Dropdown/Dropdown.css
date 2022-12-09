@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     height: 23vh;
+    margin-top: -30px;
 }
 
 .dropdown__list p{
@@ -31,7 +32,7 @@
     padding: 40px 10px 50px 15px;
     background: #F6F6F6;
     border-radius: 5px;
-    margin: 0;
+    margin: -30px 0 0 0;
     display: flex;
     flex-direction: column;
     height: 20vh;

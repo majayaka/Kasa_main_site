@@ -45,7 +45,15 @@
 }
 
 @media (max-width: 768px) {
+    .section-title_loc {
+    margin-top: 10px;
+    }
+
     .host-name {
       font-size: 12px;
+    }
+
+    .host-name p {
+    line-height: 18px;
     }
 }

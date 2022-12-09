@@ -12,7 +12,7 @@
 
 .card-list a {
     margin-top: 20px;
-    width: calc((100% / 3) - 53px);
+    width: calc((100% / 3) - 20px);
 }
 
 @media (max-width: 1200px) {
