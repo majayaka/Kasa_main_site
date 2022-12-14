@@ -10,7 +10,7 @@ export default function Stars ({starsTotalNbr = 5, starsFillNbr = 0}) {
     return stars.map((rangeElem, key) => {
         return (
            
-            <img src={key+1>starsFillNbr? "/images/star-empty.svg" : "/images/star.svg"} alt="star" />
+            <img src={key+1>starsFillNbr? "/images/star-empty.svg" : "/images/star.svg"} alt="star" key={key} />
         )
     }
     )

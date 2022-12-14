@@ -25,8 +25,7 @@ root.render(
         <Route path='*' element={<Nomatch />} />
       </Route>
      </Routes>   
-</Router>,
-  document.getElementById("root") 
+</Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

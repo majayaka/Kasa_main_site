@@ -13,6 +13,7 @@ export default function CardList({logements}) {
               title={title}
               cover={cover} 
               link={`/location/${id}`} 
+              key={id}
         /> 
       ))} {/* Redirect to the path above with the variable as parameter (as defined in Card.js) */}
     </div>
