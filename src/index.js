@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 /* Import of React Router for... */
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
@@ -7,7 +7,7 @@ import App from './App';
 
 /* Render React to html with the div "root"
 , then put this snippet in a constant */
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
 /* generate the components with render method */
 <Router>

@@ -9,7 +9,7 @@ import Location from './pages/Location/Location';
 /* Import of data of apartments */
 import logements from './data/logements.json';
 
-
+  
 export default function App () {
   return (
      <Routes> {/*Import of routes. The path and element is the returned component. */}
