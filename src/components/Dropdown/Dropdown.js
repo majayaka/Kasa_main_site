@@ -3,21 +3,21 @@ import { useState } from 'react';
 import './Dropdown.css';
 
 export default function Dropdown({ txt, title, txtArray }) {
-    const [open, setOpen] = useState(false);
-    /* initialize "Open" (the state variable) to false. 
-    And "setOpen"  callback function that updates the state (true or false in this case) */
-    return open ? (
+    const [isOpen, setIsOpen] = useState(false);
+    /* initialize "isOpen" (the state variable) to false. 
+    And "setIsOpen" is the callback function that updates the state (true or false in this case) */
+    return isOpen ? (
         <div>
             <button 
             type="button"
             className="dropdown__btn"
-            onClick={() => setOpen(false)}>
-                { /* At the click, set the reverse of the current state of "Open" with the fonction setOpen */}
+            onClick={() => setIsOpen(false)}>
+                { /* At the click, set the reverse of the current state of "isOpen" with the fonction setIsOpen */}
                 <div className="button-content">
                     <span>{title}</span>
                     <img src="/images/chevron-up.png" alt="chevron-up" />
                 </div>
-            </button> { /* If it's txtArray(equipements), map txtArray and render in p*/}
+            </button> { /* in Location.js, if it's txtArray(equipements), map txtArray and render in p*/}
             {txtArray ? (
                 <div className="dropdown__list">
                     {txtArray.map((txt, e) => ( 
@@ -27,14 +27,14 @@ export default function Dropdown({ txt, title, txtArray }) {
                     ))}
                 </div>
             ) : (
-                <p className="dropdown_p">{txt}</p> /* If it's not txtArray(equipements), render txt(description) in p*/
+                <p className="dropdown_p">{txt}</p> /* in Location.js, if it's not txtArray(equipements), render txt(description) in p*/
             )}
         </div>
-    ) : ( /*if "Open" is true (= dropdown not open), render below */
+    ) : ( /*if "isOpen" is true (= dropdown not open), render below */
         <button
         type="button"
         className="dropdown__btn"
-        onClick={() => setOpen(true)}>
+        onClick={() => setIsOpen(true)}>
             <div className="button-content">
                 <span>{title}</span>
                 <img src="/images/chevron-down.png" alt="chevron-down" />

@@ -26,18 +26,18 @@ function Location() {
     const location = logements.filter((data) => data.id === params.id).pop();
         
     if (location === undefined) {
-        return <Nomatch />;
+        return <Nomatch />; 
     /* if it's undefined, page 404 */ 
     }
     
-    return (
+    return (       
             <div className='location-section'>
-                <Slider pictures={location.pictures}/> {/* The child component Slider, and "pictures" in data "logement" using the props "location" */}
+                <Slider pictures={location.pictures}/> {/* The child component Slider, and "pictures" in data "logement" as "location" */}
                 <div className='presentation'>
                     <div className='section-title'>
-                        <h1 className='section-title_subt'>{location.title}</h1> {/* Using "title" in the props "location" */}
-                        <p className='section-title_loc'>{location.location}</p> {/* Using "location" in the props "location" */}
-                        <ul className='taglist'> {/* Map "tags" in the props "location", and render in form in string into li  */}
+                        <h1 className='section-title_subt'>{location.title}</h1> {/* Using "title" in "location" */}
+                        <p className='section-title_loc'>{location.location}</p> {/* Using "location" in "location" */}
+                        <ul className='taglist'> {/* Map "tags" in "location", and render in form in string into li  */}
                             {(location.tags).map(tag => (
                                 <li key={tag.toString()}>{tag}</li>
                             ))}
@@ -45,10 +45,10 @@ function Location() {
                     </div>
                     <div className='section-right'>
                         <div className='section-host'>
-                                <Host host={location.host} /> {/* The child component Host, and "host" in the props "location" */}
+                                <Host host={location.host} /> {/* The child component Host, and "host" in "location" */}
                         </div>
                             <div className="host-rating">
-                                <Stars starsFillNbr={location.rating} /> {/* The child component Stars, and "rating" in the props "location" */}
+                                <Stars starsFillNbr={location.rating} /> {/* The child component Stars, and "rating" in "location" */}
                             </div>
                     </div>
                 </div>   
@@ -58,14 +58,14 @@ function Location() {
                               title={"Description"}
                               txt={location.description}
                            />{/* The child component Dropdown, and title prop and txt prop in Dropdown, 
-                                "description" in the props "location" */}
+                                "description" in "location" */}
                         </div>
                         <div className="drop__down">
                            <Dropdown
                               title={"Équipements"}
                               txtArray={location.equipments}
                            />{/* The child component Dropdown, and title prop and txt prop in Dropdown, 
-                                 "equipements" in the props "location" */}
+                                 "equipements" in "location" */}
                         </div>
                     </div>
                 </div>
